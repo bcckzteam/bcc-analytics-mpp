@@ -6,7 +6,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = "BCCAnalyticsMPP"
+rootProject.name = "bcc-analytics-mpp"
 includeBuild("convention-plugins")
 include(":analytics")
 include(":provider:firebase")
