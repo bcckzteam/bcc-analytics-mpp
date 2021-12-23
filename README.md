@@ -7,3 +7,7 @@ Publish to local `./gradlew publishToMavenLocal`
 
 add in gradle `mavenLocal()` for use local
 
+# Задачи #
+- переделать на подключаемые модули
+- добавить лоигрование
+- добавить докуентация
