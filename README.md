@@ -1,4 +1,4 @@
 # Settings #
 
-Publish to local ./gradlew publishToMavenLocal
+Publish to local `./gradlew publishToMavenLocal`
 
