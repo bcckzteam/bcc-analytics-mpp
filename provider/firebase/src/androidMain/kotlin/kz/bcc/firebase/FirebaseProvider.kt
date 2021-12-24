@@ -14,28 +14,8 @@ actual class FirebaseProvider : IProvider {
         get() = ProviderEnum.FIREBASE
 
     override fun event(key: String, params: Map<String, Any>) {
-        //TODO
         val firebaseAnalytics = Firebase.analytics
-        firebaseAnalytics.logEvent(key) {
-            params.forEach { item ->
-                val bundle = Bundle()
-                when(val value = item.value){
-                    is String -> {
-                        bundle.putString(item.key,value)
-                    }
-                    is Int -> {
-                        bundle.putInt(item.key,value)
-                    }
-                    is Float -> {
-                        bundle.putFloat(item.key,value)
-                    }
-                    is Map<*, *> -> {
-                        //TODO
-                    }
-                }
-                param(item.key,  bundle)
-            }
-        }
+        firebaseAnalytics.logEvent(key,params.toBundle())
     }
 
 

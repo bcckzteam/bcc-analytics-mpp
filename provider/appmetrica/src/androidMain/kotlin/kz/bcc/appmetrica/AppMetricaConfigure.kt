@@ -9,6 +9,6 @@ actual class AppMetricaConfigure actual constructor(key: String) {
     init {
         val config = YandexMetricaConfig.newConfigBuilder(key).withLogs().build()
         YandexMetrica.activate(context, config)
-        val reporter = YandexMetrica.getReporter(context, key)
+        YandexMetrica.getReporter(context, key)
     }
 }

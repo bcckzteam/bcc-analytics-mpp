@@ -11,17 +11,11 @@ actual class AmplitudeProvider : IProvider {
         get() = ProviderEnum.AMPLITUDE
 
     override fun event(key: String, params: Map<String, Any>) {
-        val eventProperties = JSONObject()
-        try {
-            params.forEach { item ->
-                eventProperties.put(item.key, item.value)
-            }
-        } catch (e: Exception) {
-            //TODO logs
-            e.printStackTrace()
+        val json = JSONObject()
+        params.forEach { key,value ->
+            json.put(key,value)
         }
-
-        Amplitude.getInstance().logEvent(key, eventProperties)
+        Amplitude.getInstance().logEvent(key, json)
     }
 
 }

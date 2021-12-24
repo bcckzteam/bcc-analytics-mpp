@@ -11,11 +11,7 @@ actual class AppsFlayerProvider : IProvider {
         get() = ProviderEnum.APPSFLAYER
 
     override fun event(key: String, params: Map<String, Any>) {
-        val eventProperties = HashMap<String, Any>()
-        params.forEach { item ->
-            eventProperties[item.key] = item.value
-        }
-        AppsFlyerLib.getInstance().logEvent(context, key, eventProperties)
+        AppsFlyerLib.getInstance().logEvent(context, key, params)
     }
 
 }
