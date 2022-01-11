@@ -1,11 +1,11 @@
+package kz.bcc.core
 
-
-object Logger {
+object AnalyticsLogger {
 
     /**
      * Temp solution
      */
-    fun log(message : String){
+    fun log(message: String) {
         print("bcc analytics - $message")
     }
 }

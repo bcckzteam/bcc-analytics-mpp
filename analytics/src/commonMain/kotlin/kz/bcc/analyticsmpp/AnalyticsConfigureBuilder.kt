@@ -6,6 +6,7 @@ import kz.bcc.appmetrica.AppMetricaConfigure
 import kz.bcc.appmetrica.AppMetricaProvider
 import kz.bcc.appsflayer.AppsFlayerConfigure
 import kz.bcc.appsflayer.AppsFlayerProvider
+import kz.bcc.core.AnalyticsLogger
 import kz.bcc.firebase.FirebaseConfigure
 import kz.bcc.firebase.FirebaseProvider
 
@@ -48,27 +49,36 @@ class AnalyticsConfigureBuilder private constructor() {
     }
 
     fun build() {
-
+        AnalyticsLogger.log("start build")
         amplitudeKey?.let { key ->
+            AnalyticsLogger.log("start configure amplitude")
             AmplitudeConfigure(key)
             AnalyticsKit.registerProvider(AmplitudeProvider())
+            AnalyticsLogger.log("end configure amplitude")
         }
         appsFlayerKey?.let { key ->
+            AnalyticsLogger.log("start configure appsFlayer")
             AppsFlayerConfigure(key)
             AnalyticsKit.registerProvider(AppsFlayerProvider())
+            AnalyticsLogger.log("end configure appsFlayer")
         }
         appMetricaKey?.let { key ->
+            AnalyticsLogger.log("start configure appMetric")
             AppMetricaConfigure(key)
             AnalyticsKit.registerProvider(AppMetricaProvider())
+            AnalyticsLogger.log("end configure appMetric")
         }
         firebaseKey?.let { key ->
+            AnalyticsLogger.log("start configure firebase")
             FirebaseConfigure(key)
             AnalyticsKit.registerProvider(FirebaseProvider())
+            AnalyticsLogger.log("end configure firebase")
         }
 
         huaweiMetrics?.let {
 
         }
+        AnalyticsLogger.log("end build")
     }
 
 }
