@@ -25,8 +25,8 @@ kotlin {
         framework {
             baseName = "firebase"
         }
-        //pod("Firebase/Core", moduleName = "FirebaseCore")
-        //pod("Firebase/Analytics", moduleName = "FirebaseAnalytics")
+        pod("FirebaseCore")
+        pod("FirebaseAnalytics")
     }
     
     sourceSets {
