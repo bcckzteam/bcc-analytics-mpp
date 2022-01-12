@@ -5,7 +5,7 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.ktx.initialize
 import kz.bcc.core.AnalyticsExt.context
 
-actual class FirebaseConfigure actual constructor(key: String) {
+actual class FirebaseConfigure actual constructor() {
     init {
         FirebaseApp.initializeApp(context)
         Firebase.initialize(context)

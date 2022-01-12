@@ -70,7 +70,7 @@ class AnalyticsConfigureBuilder private constructor() {
         }
         firebaseKey?.let { key ->
             AnalyticsLogger.log("start configure firebase")
-            FirebaseConfigure(key)
+            FirebaseConfigure()
             AnalyticsKit.registerProvider(FirebaseProvider())
             AnalyticsLogger.log("end configure firebase")
         }

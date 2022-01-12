@@ -1,5 +1,5 @@
 package kz.bcc.firebase
 
 
-expect class FirebaseConfigure constructor(key: String) {
+expect class FirebaseConfigure constructor() {
 }

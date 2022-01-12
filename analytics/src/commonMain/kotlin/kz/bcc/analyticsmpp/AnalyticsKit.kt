@@ -55,7 +55,7 @@ object AnalyticsKit {
     /**
      * Отправка всем подключенным провайдером(общий ключ для всех)
      */
-    fun eventAllActiveProviders(key: String, params: Map<String, Any>) {
+    fun eventAllActiveProviders(key: String, params: Map<String, Any> = mapOf()) {
         providers.forEach {
             it.event(key, params)
         }
