@@ -61,9 +61,9 @@ publishing {
 
         // Provide artifacts information requited by Maven Central
         pom {
-            name.set("MPP Sample library")
-            description.set("Sample Kotlin Multiplatform library test")
-            url.set("https://github.com/beksar1998/KMMLibrary")
+            name.set("BCC Analytics MPP")
+            description.set("BCC Analytics MPP")
+            url.set("https://github.com/bcckzteam/bcc-analytics-mpp")
 
             licenses {
                 license {
@@ -73,13 +73,13 @@ publishing {
             }
             developers {
                 developer {
-                    id.set("beksar1998")
-                    name.set("Beksar")
-                    email.set("beksar1998@mail.ru")
+                    id.set("bcckzteam")
+                    name.set("bcckzteam")
+                    email.set("bcckzteam@gmail.com")
                 }
             }
             scm {
-                url.set("https://github.com/beksar1998/KMMLibrary")
+                url.set("https://github.com/bcckzteam/bcc-analytics-mpp")
             }
 
         }
