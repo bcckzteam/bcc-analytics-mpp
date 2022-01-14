@@ -2,10 +2,10 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
-    id("maven-publish")
+    id("convention.publication")
 }
 
-group = "kz.bcc.analyticsmpp"
+group = "io.github.bcckzteam"
 version = "0.0.1"
 
 kotlin {
