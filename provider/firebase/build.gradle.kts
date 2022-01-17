@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "io.github.bcckzteam"
-version = "0.0.1"
+version = "0.0.2"
 
 kotlin {
     android()
@@ -25,8 +25,8 @@ kotlin {
         framework {
             baseName = "firebase"
         }
-        pod("FirebaseCore")
-        pod("FirebaseAnalytics")
+//        pod("FirebaseCore")
+//        pod("FirebaseAnalytics")
     }
     
     sourceSets {

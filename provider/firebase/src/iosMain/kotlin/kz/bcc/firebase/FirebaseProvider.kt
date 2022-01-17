@@ -1,6 +1,6 @@
 package kz.bcc.firebase
 
-import cocoapods.FirebaseAnalytics.FIRAnalytics
+//import cocoapods.FirebaseAnalytics.FIRAnalytics
 import kz.bcc.core.IProvider
 import kz.bcc.core.ProviderEnum
 
@@ -14,6 +14,6 @@ actual class FirebaseProvider : IProvider {
         params.forEach {
             eventProperties[it.key] = it.value
         }
-        FIRAnalytics.logEventWithName(key, eventProperties)
+//        FIRAnalytics.logEventWithName(key, eventProperties)
     }
 }
